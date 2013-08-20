@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+
+
+	<package name="default" namespace="/" extends="struts-default,json-default">
+
+		<action name="inicio" class="com.danielme.tips.struts2.actions.ResultJsonAction">
+			<result type="json">
+			 	<param name="excludeProperties">texto</param>
+			 	<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+		
+	</package>
+
+</struts>
